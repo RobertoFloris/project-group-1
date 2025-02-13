@@ -1,0 +1,21 @@
+body {
+    background-image: url(./public/img/sfondo.png);
+    object-fit: cover;
+}
+
+.custom-card {
+    border-radius: 15px !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.custom-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+
+.image-section img {
+    overflow: hidden;
+    object-fit: cover;
+    border-radius: 0 15px 15px 0;
+}
