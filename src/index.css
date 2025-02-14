@@ -1,10 +1,10 @@
 body {
-    background-image: url(./public/img/sfondo.png);
+    background-color: lightslategray !important;
     object-fit: cover;
 }
 
 nav {
-    background-color: #FEBD59;
+    background-color: #FFF;
 
     img {
         width: 250px;
