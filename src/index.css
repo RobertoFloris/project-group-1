@@ -3,14 +3,39 @@ body {
     object-fit: cover;
 }
 
+nav {
+    background-color: #FEBD59;
+
+    img {
+        width: 250px;
+    }
+}
+
 .custom-card {
     border-radius: 15px !important;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
+    transition: all 1s ease;
+}
+
+.card-title {
+    text-transform: uppercase;
+    cursor: pointer;
 }
 
 .custom-card:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.custom-card .card-body p {
+    transition: max-height 1s ease, opacity 1s ease;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+}
+
+.custom-card .card-body p.visible {
+    max-height: 100px;
+    opacity: 1;
 }
 
 

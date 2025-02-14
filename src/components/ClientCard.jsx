@@ -5,17 +5,17 @@ const ClientCard = ({ turista, isVisible, onClick }) => {
     <div>
       <div className="card custom-card my-3">
         <div className="card-body">
-          <h2 className="card-title" onClick={onClick} style={{ cursor: 'pointer' }}>
+          <h2 className="card-title text-center" onClick={onClick}>
             {nome} {cognome}
           </h2>
 
-          {isVisible && (
-            <>
-              <p>Email: {email}</p>
-              <p>Codice Fiscale: {codiceFiscale}</p>
-              <p>Numero Cellulare: {numeroCellulare}</p>
-            </>
-          )}
+          <p className={isVisible ? "visible" : ""}>Email: {email}</p>
+          <p className={isVisible ? "visible" : ""}>
+            Codice Fiscale: {codiceFiscale}
+          </p>
+          <p className={isVisible ? "visible" : ""}>
+            Numero Cellulare: {numeroCellulare}
+          </p>
         </div>
       </div>
     </div>
@@ -23,5 +23,3 @@ const ClientCard = ({ turista, isVisible, onClick }) => {
 };
 
 export default ClientCard;
-
-
