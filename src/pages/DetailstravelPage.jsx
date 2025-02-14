@@ -10,15 +10,20 @@ const DetailstravelPage = () => {
 
   const viaggio = viaggi.find(viaggio => viaggio.id === parseInt(id));
   const [selectedTuristaId, setSelectedTuristaId] = useState(null);
+  const [searchText, setSearchText] = useState("");
 
   const handleClick = (turistaId) => {
     setSelectedTuristaId(selectedTuristaId === turistaId ? null : turistaId);
   };
 
+  const filteredTuristi = viaggio.listaTuristi.filter((turista) =>
+    `${turista.nome} ${turista.cognome}`.toLowerCase().includes(searchText.toLowerCase())
+  );
+
   return (
     <div className='my-5'>
-      <div className='d-flex justify-content-center'>
-        <SearchBar />
+      <div>
+        <SearchBar setSearchText={setSearchText} />
       </div>
       <div className='my-4'>
         <Link to='/travels' className='btn btn-primary'>Torna alla lista dei viaggi</Link>
@@ -27,7 +32,7 @@ const DetailstravelPage = () => {
       <h4>Lista dei partecipanti</h4>
       <h6>{viaggio.dataInizio} - {viaggio.dataFine}</h6>
       <div className="container row row-cols-md-3 row-cols-sx-1">
-        {viaggio.listaTuristi.map((turista) => (
+        {filteredTuristi.map((turista) => (
           <ClientCard
             key={turista.id}
             turista={turista}

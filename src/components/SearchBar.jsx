@@ -1,12 +1,16 @@
-const SearchBar = () => {
+const SearchBar = ({ setSearchText }) => {
+  const handleSearchChange = (event) => {
+    setSearchText(event.target.value);
+  };
+
   return (
     <input
-      className="form-control me-2"
-      type="search"
-      placeholder="Nome partecipante"
-      style={{ maxWidth: "300px" }}
+      type="text"
+      placeholder="Cerca turisti..."
+      onChange={handleSearchChange}
+      className="form-control"
     />
-  )
-}
+  );
+};
 
-export default SearchBar
+export default SearchBar;
