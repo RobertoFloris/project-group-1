@@ -31,9 +31,9 @@ const TravelCard = ({ viaggio }) => {
         <div className="card-body col-8 align-content-center">
           <h2 className="card-title">{nome}</h2>
           <h5 className="card-subtitle mb-2 text-muted">{estraiAnno(dataInizio)}</h5>
-          <p className="card-text">
+          <span className="card-text">
             {formattaData(dataInizio)} - {formattaData(dataFine)} | {calcolaGiorni(dataInizio, dataFine)} giorni
-          </p>
+          </span>
         </div>
 
         <div className="image-section col-4 p-0">

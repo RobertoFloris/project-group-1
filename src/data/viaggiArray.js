@@ -2,8 +2,8 @@ const viaggiArray = [
   {
     id: 1,
     nome: "Tour delle Alpi",
-    dataInizio: "01/06/2025",
-    dataFine: "10/06/2025",
+    dataInizio: "13/02/2025",
+    dataFine: "18/02/2025",
     immagine: "src/public/img/alpi.png",
     accompagnatori: [
       { id: 101, nome: "Giovanni", cognome: "Rossi" },
