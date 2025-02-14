@@ -30,14 +30,14 @@ const TravelPage = () => {
 
   return (
     <div className="container mt-5">
-      <h1 className="mb-4">Lista viaggi</h1>
+      <h1 className="my-5">Lista viaggi</h1>
       {ongoingTrip && (
-        <div className="my-3">
+        <div className="my-5">
           <h3>Viaggio in corso</h3>
           <TravelCard key={ongoingTrip.id} viaggio={ongoingTrip} />
         </div>
       )}
-      <div className="my-3">
+      <div className="my-5">
         <h3>Viaggi programmati</h3>
         {scheduledTrips.map(viaggio => (
           <TravelCard key={viaggio.id} viaggio={viaggio} />

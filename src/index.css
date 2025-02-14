@@ -1,12 +1,10 @@
-* {
-    padding: 0;
-    margin: ;
-}
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,400;1,800&display=swap');
 
 body {
     background-color: hsl(0, 0%, 97%) !important;
     object-fit: cover;
     height: 100vh;
+    font-family: "Roboto", serif !important;
 }
 
 nav {

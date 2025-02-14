@@ -25,18 +25,20 @@ const DetailstravelPage = () => {
       <div>
         <SearchBar setSearchText={setSearchText} />
       </div>
-      <h1>{viaggio.nome}</h1>
-      <h4>Lista dei partecipanti</h4>
-      <h6>{viaggio.dataInizio} - {viaggio.dataFine}</h6>
-      <div className="container row row-cols-md-3 row-cols-sx-1">
-        {filteredTuristi.map((turista) => (
-          <ClientCard
-            key={turista.id}
-            turista={turista}
-            isVisible={selectedTuristaId === turista.id}
-            onClick={() => handleClick(turista.id)}
-          />
-        ))}
+      <h1 className='my-3'>{viaggio.nome}</h1>
+      <h4 className='my-3'>Lista dei partecipanti</h4>
+      <h6 className='my-3'>{viaggio.dataInizio} - {viaggio.dataFine}</h6>
+      <div className="container">
+        <div className="row row-cols-1 row-cols-md-2">
+          {filteredTuristi.map((turista) => (
+            <ClientCard
+              key={turista.id}
+              turista={turista}
+              isVisible={selectedTuristaId === turista.id}
+              onClick={() => handleClick(turista.id)}
+            />
+          ))}
+        </div>
       </div>
 
       <div className='return-btn'>

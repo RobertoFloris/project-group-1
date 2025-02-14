@@ -14,8 +14,8 @@ const App = () => {
     <GlobalProvider>
       <BrowserRouter>
         <Routes>
+          <Route path="/" element={<Home />} />
           <Route element={<DefaultLayout />}>
-            <Route path="/" element={<Home />} />
             <Route path="/travels" element={<TravelPage />} />
             <Route path="/travels/details/:id" element={<DetailstravelPage />} />
           </Route>
