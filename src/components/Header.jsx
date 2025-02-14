@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <header>
-      <nav className="navbar py-5">
+      <nav className="navbar py-3">
         <div className="container container-fluid justify-content-center">
           <Link className="logo" to="/travels">
             <img src="src/public/img/logo.jpg" alt="logo" />
