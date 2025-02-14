@@ -1,13 +1,20 @@
+* {
+    padding: 0;
+    margin: ;
+}
+
 body {
-    background-color: lightslategray !important;
+    background-color: hsl(0, 0%, 97%) !important;
     object-fit: cover;
+    height: 100vh;
 }
 
 nav {
-    background-color: #FFF;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.199);
+    background-color: #F7F7F7;
 
     img {
-        width: 250px;
+        width: 150px;
     }
 }
 
@@ -38,9 +45,25 @@ nav {
     opacity: 1;
 }
 
-
 .image-section img {
     overflow: hidden;
     object-fit: cover;
     border-radius: 0 15px 15px 0;
+}
+
+.return-btn {
+    position: sticky;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 20px;
+    left: 20px;
+    background-color: #000;
+    border-radius: 100%;
+
+    a {
+        color: #fff;
+    }
 }

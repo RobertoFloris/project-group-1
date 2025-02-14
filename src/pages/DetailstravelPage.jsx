@@ -21,12 +21,9 @@ const DetailstravelPage = () => {
   );
 
   return (
-    <div className='my-5'>
+    <div className='mt-5'>
       <div>
         <SearchBar setSearchText={setSearchText} />
-      </div>
-      <div className='my-4'>
-        <Link to='/travels' className='btn btn-primary'>Torna alla lista dei viaggi</Link>
       </div>
       <h1>{viaggio.nome}</h1>
       <h4>Lista dei partecipanti</h4>
@@ -40,6 +37,10 @@ const DetailstravelPage = () => {
             onClick={() => handleClick(turista.id)}
           />
         ))}
+      </div>
+
+      <div className='return-btn'>
+        <Link to="/travels"><i className="bi bi-chevron-left "></i></Link>
       </div>
     </div>
   );
