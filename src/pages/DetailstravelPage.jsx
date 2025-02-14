@@ -2,10 +2,11 @@ import { useParams, Link } from 'react-router-dom';
 import { useState } from 'react';
 import ClientCard from '../components/ClientCard';
 import { useGlobalContext } from "../context/GlobalContext";
+import SearchBar from '../components/SearchBar';
 
 const DetailstravelPage = () => {
   const { id } = useParams();
-  const { viaggi } = useGlobalContext(); // Recupera i viaggi dal contesto
+  const { viaggi } = useGlobalContext();
 
   const viaggio = viaggi.find(viaggio => viaggio.id === parseInt(id));
   const [selectedTuristaId, setSelectedTuristaId] = useState(null);
@@ -16,6 +17,9 @@ const DetailstravelPage = () => {
 
   return (
     <div className='my-5'>
+      <div className='d-flex justify-content-center'>
+        <SearchBar />
+      </div>
       <div className='my-4'>
         <Link to='/travels' className='btn btn-primary'>Torna alla lista dei viaggi</Link>
       </div>
